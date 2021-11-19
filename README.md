@@ -11,7 +11,7 @@ var limitedItems = new LimitedDictionary<string, string>(limit: 2);
 
 limitedItems.Add("a", "A");
 limitedItems.Add("b", "B");
-_ = limitedDictionary["a"]; // use 'a', now 'b' is the less frequently used item
+_ = limitedItems["a"]; // use 'a', now 'b' is the less frequently used item
 limitedItems.Add("c", "C"); // exceed the limit, remove 'b', add the new item 'c'
 
 limitedItems.ContainsKey("b"); // false
